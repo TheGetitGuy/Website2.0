@@ -1,0 +1,29 @@
+
+/* navBar's styles */
+#coloredBarForNav{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  margin:0;
+  border-bottom: 5px solid black;
+  width:100vw;
+  height:6em;
+  background-color:grey;
+  opacity:80%;
+}
+.navButtonForBar{
+  margin:10px;
+  background:white;
+  display: inline;
+  border-radius:3px;
+  padding:1.8em;
+  text-align: center;
+  width:2in;
+  transition:all, 0.2s;
+}
+.navButtonForBar:hover{
+  transform:scale(1.1);
+}
+.navButtonForBar:active{
+  transform:scale(0.9);
+}
