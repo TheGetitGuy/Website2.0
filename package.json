@@ -9,7 +9,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "web":"vite",
+    "web":"vite"
   },
   "keywords": [],
   "author": "",
