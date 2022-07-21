@@ -2,28 +2,38 @@
 /* navBar's styles */
 #coloredBarForNav{
   display:flex;
-  justify-content:space-evenly;
+  justify-content:left;
   align-items:center;
   margin:0;
-  border-bottom: 5px solid black;
+  border-bottom: 2px solid black;
   width:100vw;
-  height:6em;
   background-color:grey;
-  opacity:80%;
 }
 .navButtonForBar{
-  margin:10px;
-  background:white;
+  height:5em;
+  line-height:5em;
+  flex: 1 1;
+  font-size: 1em;
+  color:white;
   display: inline;
-  border-radius:3px;
-  padding:1.8em;
-  text-align: center;
-  width:2in;
+  border-radius: 3px;
+  padding-left: 0.5em;
+  padding-right: 0.5em; 
+  vertical-align:center;
   transition:all, 0.2s;
 }
 .navButtonForBar:hover{
   transform:scale(1.1);
+  height:100%;
 }
 .navButtonForBar:active{
   transform:scale(0.9);
+}
+.holdingNavDivs{
+  flex: 1 1;
+  max-width:3in;
+}
+.flexBoxCentered {
+  justify-content:center;
+  display:flex;
 }

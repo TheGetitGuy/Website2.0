@@ -15,18 +15,17 @@ function NavBar() {
     textForNav: 'Development'
   },{
     urlForNav: 'url',
-    textForNav: 'socials'
+    textForNav: 'Socials'
   },
   ];
   
   return (
-    <div className='flexBoxCentered'>
-      <div  id='coloredBarForNav'>
+    
+    <div  id='coloredBarForNav'>
+      <div className='flexBoxCentered holdingNavDivs'>
         {navLinks.map((currentNav) =>(
            (<div key={currentNav.textForNav} className='navButtonForBar'>{currentNav.textForNav}</div>)
         ))}
-
-
       </div>
     </div>
   );
