@@ -1,7 +1,4 @@
 {
-  "engines": {
-    "node": "16.x"
-  },
   "name": "reactjs_nix",
   "version": "1.0.0",
   "description": "ReactJS on Replit, using Vite bundler",
@@ -9,7 +6,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "web":"vite"
+    "web": "vite"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +20,8 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "vite": "^2.9.5"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
