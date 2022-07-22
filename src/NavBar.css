@@ -10,8 +10,8 @@
   background-color:grey;
 }
 .navButtonForBar{
-  height:5em;
-  line-height:5em;
+  max-height:2.8em;
+  line-height:2.8em;
   flex: 1 1;
   font-size: 1em;
   color:white;
