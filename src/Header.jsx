@@ -7,7 +7,7 @@ import './Header.css'
 function Header() {
   return (
     <div className='flexBoxCentered'>
-      <div id='headerContainer'>
+      <div id='HeaderContainer'>
         <img id='HeaderBg' src={HeaderSvgBg}/>
         <img id='HeaderFront' src={HeaderSvgFront}/>
       </div>

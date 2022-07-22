@@ -2,11 +2,7 @@ import React from 'react';
 import './NavBar.css'
 //import './Header.css';
 
-
-
-function NavBar() {
-
-  const navLinks = [
+const navLinks = [
   {
     urlForNav: 'url',
     textForNav: 'Home'
@@ -18,8 +14,11 @@ function NavBar() {
     textForNav: 'Socials'
   },
   ];
-  
-  return (
+
+
+
+function NavBar() {
+return (
     
     <div  id='coloredBarForNav'>
       <div className='flexBoxCentered holdingNavDivs'>
