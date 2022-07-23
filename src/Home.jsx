@@ -7,18 +7,19 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-
+import { useEffect } from 'react';
 
 function Home() {
-  
+
   const [GetitProfile, setGetitProfile] = useState({})
 
+  useEffect(()=>{
   fetch('https://api.github.com/users/TheGetitGuy')
     .then((response)=> response.json())
     .then((json)=>{
       setGetitProfile(json)
       console.log(GetitProfile)
-    })
+    })},[])
 
   return (
     <main>
