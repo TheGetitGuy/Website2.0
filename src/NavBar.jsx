@@ -1,8 +1,8 @@
 import React from 'react';
 import './NavBar.css';
-import { AppBar, Toolbar, IconButton } from '@mui/material';
-import { MenuIcon } from '@mui/icons-material';
-//import './Header.css';
+
+
+//import './Header.css';  
 
 const navLinks = [
   {
@@ -17,13 +17,10 @@ const navLinks = [
   },
   ];
 
-
-
 function NavBar() {
 return (
     
     <div  id='coloredBarForNav'>
-      <AppBar position='sticky'><Toolbar> <IconButton><MenuIcon/>wow</IconButton> </Toolbar></AppBar>
       <div className='flexBoxCentered holdingNavDivs'>
         {navLinks.map((currentNav) =>(
            (<div key={currentNav.textForNav} className='navButtonForBar'>{currentNav.textForNav}</div>)
