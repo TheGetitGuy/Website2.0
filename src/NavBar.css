@@ -8,6 +8,28 @@
   border-bottom: 2px solid black;
   width:100vw;
   background-color:grey;
+  transition:all, 0.2s;
+}
+
+.navMenuButton{
+  justify-self: left;
+  max-height:2.8em;
+  line-height:2.8em;
+  font-size: 1em;
+  display: inline;
+  border-radius: 3px;
+  border-style:none;
+  background:none;
+  padding-left: 0.5em;
+  margin-right: 0.5em; 
+  vertical-align:center;
+  transition:all, 0.2s;
+}
+.navMenuButton:hover{
+  transform:scale(1.1);
+}
+.navMenuButton:active{
+  transform:scale(0.9);
 }
 .navButtonForBar{
   max-height:2.8em;
@@ -30,10 +52,22 @@
   transform:scale(0.9);
 }
 .holdingNavDivs{
+  height: 100%;
   flex: 1 1;
   max-width:3in;
+  transition:all 1s;
+}
+.holdingNavDivs.isOpened{
+  transform:translateX(+150vw)!important;
+}
+#coloredBarForNav.isOpened{
+  background-color: transparent;
+  border-style: none;
 }
 .flexBoxCentered {
   justify-content:center;
   display:flex;
+} 
+.pointer{
+  cursor:pointer;
 }

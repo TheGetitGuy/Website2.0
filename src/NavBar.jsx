@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './NavBar.css';
 
 
@@ -16,14 +16,25 @@ const navLinks = [
     textForNav: 'Socials'
   },
   ];
+  
+  function NavBar() {
+    const [isOpened, setIsOpened] = useState(' isOpened')
+    function clickHandler()
+    {
+      if (isOpened == ''){
+        setIsOpened(' isOpened')
+      }
+      else{
+      setIsOpened('')
+    }
+    }
 
-function NavBar() {
-return (
-    
-    <div  id='coloredBarForNav'>
-      <div className='flexBoxCentered holdingNavDivs'>
+    return (
+    <div  id='coloredBarForNav' className={isOpened}>
+      <button className='navMenuButton pointer' onClick={()=>{clickHandler()}}>==</button>
+      <div className={'flexBoxCentered holdingNavDivs'+isOpened}>
         {navLinks.map((currentNav) =>(
-           (<div key={currentNav.textForNav} className='navButtonForBar'>{currentNav.textForNav}</div>)
+           (<div key={currentNav.textForNav} className='pointer navButtonForBar'>{currentNav.textForNav}</div>)
         ))}
       </div>
     </div>
