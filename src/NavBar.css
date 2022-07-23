@@ -62,7 +62,7 @@
 }
 #coloredBarForNav.isOpened{
   background-color: transparent;
-  border-style: none;
+  border-color: transparent;
 }
 .flexBoxCentered {
   justify-content:center;

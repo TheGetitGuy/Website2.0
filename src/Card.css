@@ -1,0 +1,29 @@
+.cardContainer{
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width:4in;
+    box-shadow:0px 5px 20px rgba(6, 22, 39, 0.849);
+    backdrop-filter: blur(5px);
+    background-color: rgba(125, 123, 255, 0.151);
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.cardContainer > img{
+    flex: 1 1 4in;
+    margin: 0.5em;
+    object-fit: cover;
+    margin-bottom: 0;
+    border-radius: 5px;
+}
+.cardInnerContainer{
+    flex: 1 1 1in;
+    border-top:2px solid white;
+    background-color: rgba(156, 242, 253, 0.137);
+
+}
+.hover:hover{
+    filter: hue-rotate(10);
+}

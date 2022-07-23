@@ -4,17 +4,17 @@
   display:flex;
 }
 #HeaderContainer{
+  position: relative;
+  max-width: 90%;
   shape-rendering:crisp-edges;
   margin-top: 40px;
-  position:relative; 
-  wrap:nowrap;
   max-height:2.9in;
 }
 #HeaderFront{
-  display:block;
-  position: relative;
-  top: -100px;
-  margin: auto, 0;
+  position: absolute;
+  left: -29%;
+  bottom: 10%;
+  
   transition: all, 0.5s;
 }
 #HeaderContainer:hover > #HeaderFront{
