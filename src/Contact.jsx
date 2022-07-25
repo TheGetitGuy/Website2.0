@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css'
 
-function Card() {
+function Contact() {
     const [inputEmailValue, setInputEmailValue] = useState("")
     const [inputSubjectValue, setInputSubjectValue] = useState("")
     const [inputBodyValue, setInputBodyValue] = useState("")
@@ -24,16 +24,23 @@ function Card() {
     <div>
         <h2>Contact Me</h2>
         <p>Email me for business inquiries or to just say hello.</p>
-        <form onSubmit={handleSubmit}>
-            <label>Email:</label>
-            <input type='email' value={inputEmailValue} onChange={handleEmailChange}/>
-            <label>Subject:</label>
-            <input type='text' value={inputSubjectValue} onChange={handleSubjectChange}/>
-            <label>Body:</label>
-            <textarea rows='4' maxLength='256' value={inputBodyValue} onChange={handleBodyChange}/>
+        <form id='contactForm' onSubmit={handleSubmit}>
+            <div className='holdingContactInput'>
+                <label>Email:</label>
+                <input required type='email' value={inputEmailValue} onChange={handleEmailChange}/>
+            </div>
+            <div className='holdingContactInput'>
+                <label>Subject:</label>
+                <input required type='text' value={inputSubjectValue} onChange={handleSubjectChange}/>
+            </div>
+            <div className='holdingContactInput'>
+                <label>Body:</label>
+                <textarea rows='4' maxLength='256' value={inputBodyValue} onChange={handleBodyChange}/>
+            </div>
+            <button className='contactButton' type='submit'>Submit</button>
         </form>
     </div>
   );
 };
 
-export default Card;
+export default Contact;

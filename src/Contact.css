@@ -1,0 +1,26 @@
+input:invalid{
+    border-color: rgb(255, 16, 16);
+}
+#contactForm{
+    display: flex;
+    flex-direction: column;
+}
+.holdingContactInput{
+    width:100%;
+    display: flex;
+    justify-content:space-around;
+}
+.holdingContactInput > input{
+    width:50%;
+    margin: 5px;
+    
+}
+.holdingContactInput > textarea{
+    margin: 5px;
+    width:50%;
+    
+}
+.holdingContactInput > label{
+    text-align: right;
+    width:30%;
+}
