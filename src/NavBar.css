@@ -7,7 +7,7 @@
   margin:0;
   border-bottom: 2px solid black;
   width:100vw;
-  background-color:grey;
+  background-color:rgba(141, 71, 120, 0.726);
   transition:all, 0.2s;
 }
 
@@ -24,10 +24,21 @@
   margin-right: 0.5em; 
   vertical-align:center;
   transition:all, 0.2s;
+  
+}
+.navMenuButton > img{
+  line-height:2.8em;
+  max-width: 2.4em;
+  max-height: 2.4em
 }
 .navMenuButton:hover{
   transform:scale(1.1);
 }
+
+.navMenuButton.isOpened{
+  filter:brightness(10%); 
+}
+
 .navMenuButton:active{
   transform:scale(0.9);
 }

@@ -8,6 +8,7 @@ function Card(props) {
   return (
       <div className='cardContainer'>
             <img src={props.img}/>
+            
         <div className='cardInnerContainer'>
             <h1>{props.title}</h1>
             <p>{props.content}</p>

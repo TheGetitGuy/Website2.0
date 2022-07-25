@@ -12,13 +12,16 @@
     
 }
 .cardContainer > img{
-    flex: 1 1 4in;
+    flex: 1 1 2in;
     margin: 0.5em;
-    object-fit: cover;
+    object-fit:cover;
     margin-bottom: 0;
     border-radius: 5px;
 }
 .cardInnerContainer{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: left;
     flex: 1 1 1in;
     border-top:2px solid white;
     background-color: rgba(156, 242, 253, 0.137);
