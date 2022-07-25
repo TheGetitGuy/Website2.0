@@ -3,6 +3,7 @@ import './Home.css';
 import Header from './Header';
 import NavBar from './NavBar';
 import Card from './Card';//props.img, title, content
+import Contact from './Contact'//Contact Form
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -33,9 +34,14 @@ function Home() {
         <div id='rightBlock'>
           <div>
           <h1>Building Websites and App<wbr/>lications</h1>
-          <h2>React ◦ Django ◦ Javascript ◦ FrontEnd</h2>
+          <h2>React ◦ Django ◦ JavaScript ◦ FrontEnd</h2>
           <p>Professional developer who can adapt to anything because of his hardworking nature.</p>
           </div>
+
+          <div>
+            <Contact/>
+          </div>
+          
         </div>
       </div>
       <footer> A website built in React.js by Joseph Riter</footer>
