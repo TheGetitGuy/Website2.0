@@ -1,13 +1,55 @@
-main {
+main { 
   margin:0;
   text-align: center;
-  
 }
+
 body{
+
+  background-size:cover;
+  background: url('./Images/pexels-did.jpg') no-repeat fixed;
   overflow-x: hidden;
   font-family: 'Roboto';
   margin:0;
-  background: rgb(244,227,215);
-  background: linear-gradient(90deg, rgba(244,227,215,1) 0%, rgba(232,174,200,1) 65%, rgba(235,207,255,1) 100%); 
 }
-/* This stuff is for the header */
+.gridContainer{
+  display: grid;
+  width:100%;
+}
+#leftBlock{
+  display: flex;
+  justify-content: center;
+  grid-area:left;
+}
+#rightBlock{
+  grid-area:right;
+  padding: 0.2em;
+}
+#rightBlock > div{
+  backdrop-filter: blur(5px);
+  padding: 0.2em;
+  margin: 1em;
+  max-width: fit-content;
+  border-radius: 10px;
+  background-color: rgba(202, 123, 255, 0.404);
+  
+}
+@media only screen and (max-width: 600px) {
+  .gridContainer {
+    grid-template-areas: 
+    "left left"
+    "right right";
+    grid-template-rows:auto 50%;
+    grid-template-columns: 50% 50%;
+
+  }
+}
+@media only screen and (min-width: 600px) {
+  .gridContainer {
+    grid-template-areas: 
+    "left right"
+    "left right";
+    grid-template-rows:50% 50%;
+    grid-template-columns: 50% 50%;
+ 
+  }
+}
