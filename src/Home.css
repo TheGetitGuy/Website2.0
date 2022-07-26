@@ -12,7 +12,6 @@ body{
   color:rgb(255, 232, 130);
   background-size:cover;
   background-color:var(--bgColor1);
-  overflow-x: hidden;
   font-family: 'Roboto';
   margin:0;
 }
