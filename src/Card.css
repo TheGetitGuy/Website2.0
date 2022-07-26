@@ -1,5 +1,6 @@
 
 .cardContainer{
+    padding: 5px;
     margin: 1em;
     display: flex;
     flex-direction: column;
@@ -10,19 +11,20 @@
     background-color: var(--bgColor1);
     border-radius: 10px;
     border-width:1px;
-    overflow: hidden;
     border-style: solid;
     border-color:var( --borderColor1);
     flex: 1 1;
     
 }
 .cardContainer > img{
-    max-width: 4in;
+    margin: 5px;
+    max-width: 3.5in;
     place-self: center center;
     flex: 1 1 1in;
-    margin: 0.5em;
     object-fit: cover; 
-    border-radius: 5px;
+    border-radius: 10px;
+    border-color: var(--borderColor1);
+    border-style: solid;
     height:fit-content;
 }
 .cardInnerContainer{

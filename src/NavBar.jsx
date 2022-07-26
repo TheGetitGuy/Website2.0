@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './NavBar.css'; 
 import menuButton from "./Images/MenuButton.png"
 
-//import './Header.css';  
 
 const navLinks = [
   {
@@ -15,21 +14,21 @@ const navLinks = [
     urlForNav: 'url',
     textForNav: 'Socials'
   },
-  ];
-  
-  function NavBar() {
-    const [isOpened, setIsOpened] = useState('')
-    function clickHandler()
-    {
-      if (isOpened == ''){
-        setIsOpened(' isOpened')
-      }
-      else{
+]; 
+function NavBar() {
+  const [isOpened, setIsOpened] = useState('') 
+  const [isPassed, setisPassed] = useState(false)
+  function clickHandler()
+  {
+    if (isOpened == ''){
+      setIsOpened(' isOpened')
+    }
+    else{
       setIsOpened('')
     }
-    }
-
-    return (
+  }
+  
+  return (
     <div  id='coloredBarForNav' className={isOpened}>
       <button className={'navMenuButton pointer'+isOpened} onClick={()=>{clickHandler()}}><img src={menuButton}/></button>
       <div className={'flexBoxCentered holdingNavDivs'+isOpened}>
