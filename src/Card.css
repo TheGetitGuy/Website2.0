@@ -1,3 +1,4 @@
+
 .cardContainer{
     margin: 1em;
     display: flex;
@@ -6,24 +7,30 @@
     max-width:4in;
     box-shadow:0px 5px 20px rgba(6, 22, 39, 0.849);
     backdrop-filter: blur(5px);
-    background-color: rgba(202, 123, 255, 0.404);
+    background-color: var(--bgColor1);
     border-radius: 10px;
+    border-width:1px;
     overflow: hidden;
+    border-style: solid;
+    border-color:var( --borderColor1);
+    flex: 1 1;
     
 }
 .cardContainer > img{
-    flex: 1 1 2in;
+    max-width: 4in;
+    place-self: center center;
+    flex: 1 1 1in;
     margin: 0.5em;
-    object-fit:cover;
-    margin-bottom: 0;
+    object-fit: cover; 
     border-radius: 5px;
+    height:fit-content;
 }
 .cardInnerContainer{
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: left;
     flex: 1 1 1in;
-    background-color: rgba(202, 123, 255, 0.404);
+    background-color: var(--bgColor1);
 
 }
 .hover:hover{

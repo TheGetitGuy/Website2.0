@@ -6,7 +6,7 @@ import './Header.css'
 
 function Header() {
   return (
-    <div className='hover flexBoxCentered'>
+    <div className='hover flexBoxCentered headerBackground'>
       <div id='HeaderContainer'>
         <img id='HeaderBg' src={HeaderSvgBg}/>
         <img id='HeaderFront' src={HeaderSvgFront}/>

@@ -7,7 +7,7 @@
   margin:0;
   border-bottom: 2px solid black;
   width:100vw;
-  background-color:rgba(141, 71, 120, 0.726);
+  background-color:var(--bgColor1);
   transition:all, 0.2s;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .navMenuButton.isOpened{
-  filter:brightness(10%); 
+  filter:brightness(200%); 
 }
 
 .navMenuButton:active{

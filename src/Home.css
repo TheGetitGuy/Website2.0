@@ -1,12 +1,17 @@
+:root{
+  --bgColor1:rgb(82, 29, 64);
+  --borderColor1:rgb(255, 0, 170);
+}
+
 main { 
   margin:0;
   text-align: center;
 }
 
 body{
-  color:white;
+  color:rgb(255, 232, 130);
   background-size:cover;
-  background: url('./Images/pexels-did.jpg') no-repeat fixed;
+  background-color:var(--bgColor1);
   overflow-x: hidden;
   font-family: 'Roboto';
   margin:0;
@@ -22,37 +27,45 @@ body{
 }
 #rightBlock{
   grid-area:right;
-  padding: 0.2em;
+  margin: 0.2em;
+  padding: 3rem;
 }
 #rightBlock > div{
-  backdrop-filter: blur(5px);
-  padding: 0.2em;
-  margin: 1em;
-  max-width: fit-content;
+  border-color:var(--borderColor1);
+  border-width: 5px;
   border-radius: 10px;
-  background-color: rgba(202, 123, 255, 0.404);
-  
+  margin: 1rem;
+  padding: 1rem;
+  background-color: var(--bgColor1);
+  border-style:dotted;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .gridContainer {
     grid-template-areas: 
     "left left"
-    "right right";
+    "right right"
+    "foot foot";
     grid-template-rows:auto 50%;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: auto 50%;
 
   }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   .gridContainer {
     grid-template-areas: 
     "left right"
-    "left right";
-    grid-template-rows:50% 50%;
-    grid-template-columns: 50% 50%;
+    ". right"
+    "foot foot";
+    grid-template-rows:auto 50%;
+    grid-template-columns:auto 50%;
  
   }
 }
 textarea {
   resize: none;
+}
+footer{
+  text-align: center;
+  grid-area: foot;
+  margin:3rem;
 }

@@ -21,7 +21,7 @@ function Contact() {
     }
 
     return (
-    <div>
+    <div id="contactFormHolder">
         <h2>Contact Me</h2>
         <p>Email me for business inquiries or to just say hello.</p>
         <form id='contactForm' onSubmit={handleSubmit}>
@@ -37,7 +37,7 @@ function Contact() {
                 <label>Body:</label>
                 <textarea rows='4' maxLength='256' value={inputBodyValue} onChange={handleBodyChange}/>
             </div>
-            <button className='contactButton' type='submit'>Submit</button>
+            <button className='contactButton pointer' type='submit'>Submit</button>
         </form>
     </div>
   );
