@@ -24,7 +24,7 @@ function Home() {
     })},[])
 
   return (
-    <main>
+    <main id='home'>
       <Header/>
       <NavBar/>
       <div className='gridContainer'>
@@ -43,6 +43,7 @@ function Home() {
           </div>
           
         </div>
+        
       </div>
       <footer> A website built in React.js by Joseph Riter.<br/>
       Server made with Node.js and Express.

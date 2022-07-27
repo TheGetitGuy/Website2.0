@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './NavBar.css'; 
 import menuButton from "./Images/MenuButton.png"
+import gitButton from "./Images/github.svg"
 
 
 const navLinks = [
   {
-    urlForNav: 'url',
+    urlForNav: '#home',
     textForNav: 'Home'
   },{
-    urlForNav: 'url',
-    textForNav: 'Development'
-  },{
-    urlForNav: 'url',
-    textForNav: 'Socials'
-  },
+    urlForNav: 'https://github.com/TheGetitGuy',
+    textForNav: <><img src={gitButton} style={{transform: 'translate(-5px,7px)'}} height='30em' innertext='Github'/><span>GitHub</span></>
+  }
 ]; 
 function NavBar() {
   const [isOpened, setIsOpened] = useState('') 
@@ -33,7 +31,7 @@ function NavBar() {
       <button className={'navMenuButton pointer'+isOpened} onClick={()=>{clickHandler()}}><img src={menuButton}/></button>
       <div className={'flexBoxCentered holdingNavDivs'+isOpened}>
         {navLinks.map((currentNav) =>(
-           (<div key={currentNav.textForNav} className='pointer navButtonForBar'>{currentNav.textForNav}</div>)
+           (<a href={currentNav.urlForNav} className='pointer navButtonForBar'><div key={currentNav.textForNav} >{currentNav.textForNav}</div></a>)
         ))}
       </div>
     </div>
