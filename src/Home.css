@@ -70,7 +70,9 @@ footer{
   margin:3rem;
 }
 .contentCardsBox{
-  max-width:100%;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width:90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;

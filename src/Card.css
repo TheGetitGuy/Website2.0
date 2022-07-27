@@ -7,6 +7,7 @@
     justify-content: center;
     position: relative;
     max-width:6in;
+    min-width: 3in;
     box-shadow:0px 5px 20px rgba(6, 22, 39, 0.849);
     backdrop-filter: blur(5px);
     background-color: var(--bgColor1);
@@ -19,7 +20,7 @@
 }
 .cardContainer > img{
     margin: 5px;
-    max-width: 5.5in;
+    max-width: 100%;
     place-self: center center;
     flex: 1 1 1in;
     object-fit: cover; 
