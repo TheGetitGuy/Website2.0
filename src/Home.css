@@ -20,6 +20,7 @@ body{
   width:100%;
 }
 #leftBlock{
+  flex: 1 1;
   display: flex;
   justify-content: center;
   grid-area:left;

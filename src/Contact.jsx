@@ -27,15 +27,15 @@ function Contact() {
         <form id='contactForm' onSubmit={handleSubmit}>
             <div className='holdingContactInput'>
                 <label>Email:</label>
-                <input required type='email' value={inputEmailValue} onChange={handleEmailChange}/>
+                <input required name='Input' type='email' value={inputEmailValue} onChange={handleEmailChange}/>
             </div>
             <div className='holdingContactInput'>
                 <label>Subject:</label>
-                <input required type='text' value={inputSubjectValue} onChange={handleSubjectChange}/>
+                <input required name='Subject' type='text' value={inputSubjectValue} onChange={handleSubjectChange}/>
             </div>
             <div className='holdingContactInput'>
                 <label>Body:</label>
-                <textarea rows='4' maxLength='256' value={inputBodyValue} onChange={handleBodyChange}/>
+                <textarea name='textArea' rows='4' maxLength='256' value={inputBodyValue} onChange={handleBodyChange}/>
             </div>
             <button className='contactButton pointer' type='submit'>Submit</button>
         </form>

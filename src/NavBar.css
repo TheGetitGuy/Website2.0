@@ -10,7 +10,7 @@
   align-items:center;
   margin:0;
   border-bottom: 2px solid black;
-  width:100vw;
+  width:100%;
   background-color:var(--bgColor1);
   transition:all, 0.2s;
 }

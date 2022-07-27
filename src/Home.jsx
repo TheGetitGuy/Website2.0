@@ -44,7 +44,9 @@ function Home() {
           
         </div>
       </div>
-      <footer> A website built in React.js by Joseph Riter</footer>
+      <footer> A website built in React.js by Joseph Riter.<br/>
+      Server made with Node.js and Express.
+      </footer>
     </main>
   );
 }
