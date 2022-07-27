@@ -4,6 +4,7 @@ import Header from './Header';
 import NavBar from './NavBar';
 import Card from './Card';//props.img, title, content
 import Contact from './Contact'//Contact Form
+import ProjecctContent from './ProjectContent'//cards of my projects
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -43,7 +44,7 @@ function Home() {
           </div>
           
         </div>
-        
+        <ProjecctContent/>
       </div>
       <footer> A website built in React.js by Joseph Riter.<br/>
       Server made with Node.js and Express.
