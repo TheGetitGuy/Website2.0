@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import './Contact.css'
+import loadingIcon from './Images/loading.svg'
 
 function Contact() {
+    const [hideForm, sethideForm] = useState(false)
+    const [showComplete, setShowComplete] = useState(false)
     const [inputEmailValue, setInputEmailValue] = useState("")
     const [inputSubjectValue, setInputSubjectValue] = useState("")
     const [inputBodyValue, setInputBodyValue] = useState("")
-    
+
     const handleSubmit = (event)=>{
         //handle the form submit and send it off to Server2.0
         event.preventDefault()
@@ -22,8 +25,15 @@ function Contact() {
                 'Content-Type':'application/x-www-form-urlencoded'
             }}
         async function postForm(){
+            sethideForm(true)
             const response = await fetch(url,fetchOptions);
-            response.ok;
+            if (!response.ok){
+                sethideForm(false)
+                throw new Error(`couldnt send the form`)
+            } else {
+                
+                setShowComplete(true)
+            }
             response.status;
             console.log(response)
         }
@@ -39,8 +49,10 @@ function Contact() {
     const handleBodyChange = (event)=>{
         setInputBodyValue(event.target.value)
     }
-
+    
     return (
+    <div className={(hideForm ? 'hideForm':'showForm')+` `+(showComplete ? 'showComplete':  ' ')}>
+    <img src={hideForm ?loadingIcon:' '} className={showComplete ? 'hideLoadingImage':'showLoadingImage'}/>
     <div id="contactFormHolder">
         <h2>Contact Me</h2>
         <p>Email me for business inquiries or to just say hello.</p>
@@ -59,6 +71,7 @@ function Contact() {
             </div>
             <button className='contactButton pointer' type='submit'>Submit</button>
         </form>
+    </div>
     </div>
   );
 };
