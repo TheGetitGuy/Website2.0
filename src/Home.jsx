@@ -14,6 +14,7 @@ import backgroundImg from './Images/pexels-did.jpg'
 
 function Home() {
 
+
   const [GetitProfile, setGetitProfile] = useState({})
 
   useEffect(()=>{

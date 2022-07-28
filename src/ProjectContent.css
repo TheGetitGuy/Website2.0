@@ -1,0 +1,16 @@
+.contentCardsBox{
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width:90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    opacity: 0;
+    transition: all 2s;
+    transform: translateY(-50px);
+}
+
+.isVisible{
+    transform: translateY(0);
+    opacity: 100%;
+}

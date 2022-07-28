@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, {useRef, useEffect, useState } from 'react';
 import Card from './Card';//props.img, title, content 
+import './ProjectContent.css'
 import pixelGenerator from './Images/projects/objectPixelgenerator.png'
 import pyligen from './Images/projects/pyligen.png'
 import reactCards from './Images/projects/reactCards.png'
@@ -25,25 +26,35 @@ const cardsToMake = [//The urls are used as ids so keep them different
     cardTitle: 'React Generated Cards',
     cardContent:'Cards created in react by pulling from a random api generator.',
   },{
-    urlForNav: '#home3',
+    urlForNav: '#home4',
     picture: retro,
     cardTitle: 'Retro-MMO Fan Site',
     cardContent:'The latest version of my fansite for the Retro-MMO community.',
   },{
-    urlForNav: '#home3',
+    urlForNav: '#home5',
     picture: rotten,
     cardTitle: 'Mock E-Commerce Site',
     cardContent:'Practicing HTML and CSS by building a responsive Mock E-Commerce Site ',
   },{
-    urlForNav: '#home3',
+    urlForNav: '#home6',
     picture: saveher,
     cardTitle: 'Save Her',
     cardContent:'Game Jam game made in G-Develop in under a week.',
   }
 ]; 
 function ProjectContent() { 
+    const refforCardBox = useRef();
+    const [cardBoxIsVisible, setCardBoxIsVisible] = useState()
+    useEffect(()=>{ //using this to Change the class of the cards element when scrolled to
+        const observer = new IntersectionObserver((entries)=>{
+         const entry = entries[0];
+         setCardBoxIsVisible(entry.isIntersecting)
+         console.log(cardBoxIsVisible)
+        })
+        observer.observe(refforCardBox.current)
+    },[])
   return (
-    <div className='contentCardsBox'>
+    <div ref={refforCardBox} className={`contentCardsBox ${cardBoxIsVisible ? 'isVisible' : ''}`}>
         {cardsToMake.map((currentCard) =>(
            (<Card key={currentCard.urlForNav} img={currentCard.picture} title={currentCard.cardTitle} content={currentCard.cardContent}/>)
         ))}
