@@ -7,9 +7,29 @@ function Contact() {
     const [inputBodyValue, setInputBodyValue] = useState("")
     
     const handleSubmit = (event)=>{
+        //handle the form submit and send it off to Server2.0
         event.preventDefault()
+        const formData = new URLSearchParams();//let build the formData URLSearchParams worked best
+        
+        formData.append('Email',inputEmailValue);
+        formData.append('Subject',inputSubjectValue);
+        formData.append('Body',inputBodyValue);
+        const url = 'http://localhost:5000/email/mailer'
+        const fetchOptions = {
+            method: 'POST',
+            body:formData,
+            headers:{
+                'Content-Type':'application/x-www-form-urlencoded'
+            }}
+        async function postForm(){
+            const response = await fetch(url,fetchOptions);
+            response.ok;
+            response.status;
+            console.log(response)
+        }
+        postForm()
     }
-
+    //below handles the text fields updating.
     const handleEmailChange = (event)=>{
         setInputEmailValue(event.target.value)
     }

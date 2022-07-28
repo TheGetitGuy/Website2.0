@@ -11,7 +11,6 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { useEffect } from 'react';
 import backgroundImg from './Images/pexels-did.jpg'
-
 function Home() {
 
 
