@@ -28,7 +28,7 @@ function NavBar() {
   
   return (
     <div  id='coloredBarForNav' className={isOpened}>
-      <button className={'navMenuButton pointer'+isOpened} onClick={()=>{clickHandler()}}><img src={menuButton}/></button>
+      {/*<button className={'navMenuButton pointer'+isOpened} onClick={()=>{clickHandler()}}><img src={menuButton}/></button> */}
       <div className={'flexBoxCentered holdingNavDivs'+isOpened}>
         {navLinks.map((currentNav) =>(
            (<a key={currentNav.textForNav} href={currentNav.urlForNav} className='pointer navButtonForBar'><div >{currentNav.textForNav}</div></a>)

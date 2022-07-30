@@ -1,15 +1,15 @@
 input:invalid{
     border-color: rgb(255, 16, 16);
 }
-#contactForm{
-    display: flex;
-    flex-direction: column;
-    padding:5px;
+#contactForm{ 
+    flex: 1 1 ;
+    padding:2em;
     border-style: solid;
 }
 #contactFormHolder{
-    
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 button.contactButton{
     align-self:center;
@@ -26,22 +26,18 @@ button.contactButton:active{
     transform: scale(0.9);
 }
 .holdingContactInput{
-    width:100%;
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
 }
-.holdingContactInput > input{
-    width:50%;
+.holdingContactInput > input{ 
     margin: 5px;
 }
-.holdingContactInput > textarea{
-    margin: 5px;
-    width:50%;
+.holdingContactInput > textarea{ 
+    margin: 5px; 
     
 }
-.holdingContactInput > label{
+.holdingContactInput > label{ 
     text-align: right;
-    width:30%;
 
 }
 .hideForm > *:not(img){
