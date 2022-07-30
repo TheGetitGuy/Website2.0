@@ -44,10 +44,10 @@ button.contactButton:active{
     width:30%;
 
 }
-.hideForm > *:not(.showLoadingImage){
+.hideForm > *:not(img){
     display: none;
 }
-.showForm > *:not(.hideLoadingImage){
+.showForm > *:not(img){
     display: block;
 }
 .hideForm::before{
@@ -56,11 +56,16 @@ button.contactButton:active{
     width: 100%;
     height: 100%;
 }
+
 .hideForm.showComplete::before{
     content: 'Thanks for the Email!'
 }
 .hideLoadingImage{
-    display: none;
+    display: none !important;;
+    width:1px;
+    height: 1in;
+    padding: 0;
+    margin:0;
 }
 .showLoadingImage{
     padding: 10%;

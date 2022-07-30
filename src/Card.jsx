@@ -10,7 +10,7 @@ function Card(props) {
             <img src={props.img}/>
             
         <div className='cardInnerContainer'>
-            <h1>{props.title}</h1>
+           <a className='cardLinks' href={props.url}> <h1>{props.title}</h1> </a>
             <p>{props.content}</p>
         </div>
     </div>

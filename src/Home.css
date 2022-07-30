@@ -64,8 +64,14 @@ body{
 textarea {
   resize: none;
 }
-footer{
-  text-align: center;
+footer{  
+  display: block; 
+  z-index: -1; 
+  width:100%;  
+  margin-top: -5rem;
+  padding-top: 10rem;
+  background-color:black;
+  text-align: center; 
   grid-area: foot;
-  margin:3rem;
+  padding-bottom: 6rem;
 }

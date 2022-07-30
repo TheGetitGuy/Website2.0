@@ -31,7 +31,7 @@ function NavBar() {
       <button className={'navMenuButton pointer'+isOpened} onClick={()=>{clickHandler()}}><img src={menuButton}/></button>
       <div className={'flexBoxCentered holdingNavDivs'+isOpened}>
         {navLinks.map((currentNav) =>(
-           (<a href={currentNav.urlForNav} className='pointer navButtonForBar'><div key={currentNav.textForNav} >{currentNav.textForNav}</div></a>)
+           (<a key={currentNav.textForNav} href={currentNav.urlForNav} className='pointer navButtonForBar'><div >{currentNav.textForNav}</div></a>)
         ))}
       </div>
     </div>

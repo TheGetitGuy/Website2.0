@@ -41,3 +41,15 @@
 .hover:hover{
     filter: hue-rotate(10);
 }
+.cardLinks{
+    color:yellow;
+    text-decoration: none;
+    transition: all 0.4s;
+    transform: scale(1.0);
+    display:inline-block;
+}
+.cardLinks:hover{
+    display:inline-block;
+    transform: scale(1.05);
+    
+}

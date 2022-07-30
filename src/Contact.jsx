@@ -52,7 +52,7 @@ function Contact() {
     
     return (
     <div className={(hideForm ? 'hideForm':'showForm')+` `+(showComplete ? 'showComplete':  ' ')}>
-    <img src={hideForm ?loadingIcon:' '} className={showComplete ? 'hideLoadingImage':'showLoadingImage'}/>
+    <img src={hideForm ?loadingIcon:' '} className={(showComplete ? 'hideLoadingImage':'showLoadingImage')+' '+(hideForm ? 'showLoadingImage':'hideLoadingImage')}/>
     <div id="contactFormHolder">
         <h2>Contact Me</h2>
         <p>Email me for business inquiries or to just say hello.</p>
