@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Contact.css'
 import loadingIcon from './Images/loading.svg'
-
+import {Button} from '@mui/material'
+import { TextField, Box, CircularProgress } from '@mui/material';
 function Contact() {
     const [hideForm, sethideForm] = useState(false)
     const [showComplete, setShowComplete] = useState(false)
@@ -52,25 +53,20 @@ function Contact() {
     
     return (
     <div className={(hideForm ? 'hideForm':'showForm')+` `+(showComplete ? 'showComplete':  ' ')}>
-    <img src={hideForm ?loadingIcon:' '} className={(showComplete ? 'hideLoadingImage':'showLoadingImage')+' '+(hideForm ? 'showLoadingImage':'hideLoadingImage')}/>
+    <CircularProgress className={(showComplete ? 'hideLoadingImage':'')+' '+(hideForm ? 'showLoadingImage':'hideLoadingImage')}/>
     <div id="contactFormHolder">
         <h2>Contact Me</h2>
         <p>Email me for business inquiries or to just say hello.</p>
-        <form id='contactForm' onSubmit={handleSubmit}>
-            <div className='holdingContactInput'>
-                <label>Email:</label>
-                <input required name='Input' type='email' value={inputEmailValue} onChange={handleEmailChange}/>
-            </div>
-            <div className='holdingContactInput'>
-                <label>Subject:</label>
-                <input required name='Subject' type='text' value={inputSubjectValue} onChange={handleSubjectChange}/>
-            </div>
-            <div className='holdingContactInput'>
-                <label>Body:</label>
-                <textarea name='textArea' rows='4' maxLength='256' value={inputBodyValue} onChange={handleBodyChange}/>
-            </div>
-            <button className='contactButton pointer' type='submit'>Submit</button>
-        </form>
+        <Box  id='contactForm' onSubmit={handleSubmit} component='form'>
+
+                <TextField className='holdingContactInput'  label='Email' variant='outlined' required name='Input' type='email' value={inputEmailValue} onChange={handleEmailChange}/>
+
+                <TextField className='holdingContactInput' variant='outlined' label='Subject' required name='Subject' type='text' value={inputSubjectValue} onChange={handleSubjectChange}/>
+ 
+                <TextField className='holdingContactInput' multiline label='Body' variant='outlined' name='textArea' rows='4' maxLength='256' value={inputBodyValue} onChange={handleBodyChange}/>
+
+            <Button variant="contained"  className='contactButton pointer' type='submit'>Submit</Button>
+        </Box>
     </div>
     </div>
   );

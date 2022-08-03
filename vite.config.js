@@ -5,7 +5,7 @@ const getConfig = ({ command, mode }) => ({
   server: {
     host: '0.0.0.0',
     hmr: {
-      clientPort: 3000,
+      clientPort: 5173,
     }
   },
   plugins: [

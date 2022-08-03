@@ -11,6 +11,12 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { useEffect } from 'react';
 import backgroundImg from './Images/pexels-did.jpg'
+import { Box, createTheme, Paper, ThemeProvider,Grid,Container,Stack} from '@mui/material';  
+
+
+const cardStyling = {padding:"0.25in", margin:"0.25in", maxWidth:"5in"}
+
+
 function Home() {
 
 
@@ -25,31 +31,43 @@ function Home() {
     })},[])
 
   return (
-    <main id='home'>
-      <Header/>
+   
+    <main id='home'> 
+    <Grid container spacing="0.7em" sx={{overflowX:'hidden'}}> 
       <NavBar/>
-      <div className='gridContainer'>
-        <div id='leftBlock'>
-          <Card img={GetitProfile.avatar_url} title={`Joseph Riter | Web Developer`} content={GetitProfile.bio}/> 
-        </div>
-        <div id='rightBlock'>
-          <div>
+      <Header/>
+      <Box className='gridContainer' sx={{display:'flex', justifyContent:'space-evenly',flexWrap:'wrap'}} >
+      
+      <Grid item sm={5}  >
+        <Container className="getitCard" maxWidth='sm' >
+          <Card  id='getitCard' img={GetitProfile.avatar_url} title={`Joseph Riter | Web Developer`} content={GetitProfile.bio}/> 
+        </Container>
+      </Grid>
+      <Grid item sm={5}>
+        <Container maxWidth='sm'>
+          <Paper variant='outlined'  sx={cardStyling}  elevation={6}>
           <h1>Building Websites and App<wbr/>lications</h1>
           <h2>React ◦ Django ◦ JavaScript ◦ FrontEnd</h2>
           <p>Professional developer who can adapt to anything because of his hardworking nature.</p>
-          </div>
-
-          <div>
-            <Contact/>
-          </div>
+          </Paper>
           
-        </div>
-      </div>
+          <Paper variant='outlined' sx={cardStyling} elevation={6}>
+            <Contact/>
+          </Paper>
+        </Container>
+        </Grid> 
+      <Grid item sm={8}>
+      </Grid>
+      </Box>
+      <Box>
       <ProjectContent/>
+      </Box>
       <footer> A website built in React.js by Joseph Riter.<br/>
       Server made with Node.js and Express.
-      </footer>
+      </footer> 
+      </Grid>
     </main>
+
   );
 }
 

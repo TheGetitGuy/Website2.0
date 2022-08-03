@@ -1,9 +1,12 @@
 .flexBoxCentered {
-  width:100%;
+
+  width:100vw;
   justify-content: center;
   display: flex;
 }
 .headerBackground{
+  padding-top: 1in; 
+  min-height: 4in;
   background-image:url('./Images/pexels-did.jpg');
   background-size:cover;
   background-attachment: fixed;
@@ -13,13 +16,13 @@
   max-width: 90%;
   shape-rendering:crisp-edges;
   margin-top: 40px;
-  max-height: 2.9in;
+  max-height: 4in;
 }
 #HeaderFront{
   position: absolute;
   left: -29%;
   flex: 1 1;
-  bottom: 10%;
+  bottom: 40%;
   transition: all, 0.5s;
 }
 #HeaderContainer:hover > #HeaderFront{

@@ -14,16 +14,19 @@ const cardsToMake = [//The urls are used as ids so keep them different
     urlForNav: 'https://www.pyligen.com/',
     picture: pyligen, //Needs Recropped
     cardTitle: 'Python List Generator',
+    size: '2in',
     cardContent:'A tool for generating 2d lists for use in python. I made this for building my own games.',
   },{
     urlForNav: 'https://codepen.io/thegetitguy/pen/QWOXypd/result',
     picture: pixelGenerator,
     cardTitle: 'Object Oriented Canvas Project',
+    size: '2in',
     cardContent:'This is a project made to learn canvas and get more experience with the javascript class system.',
   },{
     urlForNav: 'https://codepen.io/thegetitguy/pen/ExbrgzN/result',
     picture: reactCards,
     cardTitle: 'React Generated Cards',
+    size: '2in',
     cardContent:'Cards created in react by pulling from a random api generator.',
   },{
  /**    urlForNav: '#home4',    Evan said no :<
@@ -34,11 +37,13 @@ const cardsToMake = [//The urls are used as ids so keep them different
     urlForNav: 'https://codepen.io/thegetitguy/full/JjOaORK/result',
     picture: rotten,
     cardTitle: 'Mock E-Commerce Site',
+    size: '200',
     cardContent:'Practicing HTML and CSS by building a responsive Mock E-Commerce Site ',
   },{
     urlForNav: 'https://thegetitguy.itch.io/save-her-ugj-33',
     picture: saveher,
     cardTitle: 'Save Her',
+    size: '200',
     cardContent:'Game Jam game made in G-Develop in under a week.',
   }
 ]; 
@@ -56,7 +61,7 @@ function ProjectContent() {
   return (
     <div ref={refforCardBox} className={`contentCardsBox ${cardBoxIsVisible ? 'isVisible' : ''}`}>
         {cardsToMake.map((currentCard) =>(
-           (<Card key={currentCard.urlForNav} url={currentCard.urlForNav} img={currentCard.picture} title={currentCard.cardTitle} content={currentCard.cardContent}/>)
+           (<Card  size={currentCard.size} className='contentCards' key={currentCard.urlForNav} url={currentCard.urlForNav} img={currentCard.picture} title={currentCard.cardTitle} content={currentCard.cardContent}/>)
         ))}
     </div>
   );

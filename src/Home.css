@@ -1,76 +1,34 @@
-:root{
-  --bgColor1:rgb(82, 29, 64);
-  --borderColor1:rgb(255, 0, 170);
+:root{ 
+  overflow-x: hidden;
+  width: 100vw;
+  
 }
 
 main { 
-  margin:0;
-  text-align: center;
+  
 }
-
 body{
-  color:rgb(255, 232, 130);
+  
   background-size:cover;
-  background-color:var(--bgColor1);
-  font-family: 'Roboto';
-  margin:0;
+  font-family: 'Roboto'; 
 }
 .gridContainer{
-  display: grid;
-  width:100%;
+  margin: 0 auto;
+  max-width: 12in;
 }
-#leftBlock{
-  flex: 1 1;
-  display: flex;
-  justify-content: center;
-  grid-area:left;
-}
-#rightBlock{
-  grid-area:right;
-  margin: 0.2em;
-  padding: 3rem;
-}
-#rightBlock > div{
-  border-color:var(--borderColor1);
-  border-width: 5px;
-  border-radius: 10px;
-  margin: 1rem;
-  padding: 1rem;
-  background-color: var(--bgColor1);
-  border-style:dotted;
-}
-@media only screen and (max-width: 800px) {
-  .gridContainer {
-    grid-template-areas: 
-    "left left"
-    "right right"
-    "foot foot";
-    grid-template-rows:auto 50%;
-    grid-template-columns: auto 50%;
 
-  }
+.getitCard{
+  margin-top: 2em;
 }
-@media only screen and (min-width: 800px) {
-  .gridContainer {
-    grid-template-areas: 
-    "left right"
-    ". right"
-    "foot foot";
-    grid-template-rows:auto 50%;
-    grid-template-columns:auto 50%;
- 
-  }
-}
-textarea {
-  resize: none;
-}
+
 footer{  
+  color: white;
   display: block; 
   z-index: -1; 
   width:100%;  
   margin-top: -5rem;
   padding-top: 10rem;
-  background-color:black;
+  background-color:rgb(48, 50, 54);
   text-align: center; 
   grid-area: foot;
   padding-bottom: 6rem;

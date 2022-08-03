@@ -1,49 +1,27 @@
-input:invalid{
-    border-color: rgb(255, 16, 16);
-}
+
 #contactForm{ 
-    flex: 1 1 ;
-    padding:2em;
-    border-style: solid;
 }
-#contactFormHolder{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-button.contactButton{
-    align-self:center;
+.contactButton{
+    justify-self: end;
     border-radius: 5px;
     border-style: none;
-    min-width: 6rem;
+    justify-items: flex-end;
+    max-width: 6rem;
     height: 2rem;
     transition:transform 0.2s;
 }
-button.contactButton:hover{
+
+.contactButton:hover{
     transform: scale(1.05);
 }
-button.contactButton:active{
+.contactButton:active{
     transform: scale(0.9);
 }
-.holdingContactInput{
-    display: flex;
-    justify-content:space-between;
-}
-.holdingContactInput > input{ 
-    margin: 5px;
-}
-.holdingContactInput > textarea{ 
-    margin: 5px; 
-    
-}
-.holdingContactInput > label{ 
-    text-align: right;
 
-}
-.hideForm > *:not(img){
+.hideForm > *:not(svg){
     display: none;
 }
-.showForm > *:not(img){
+.showForm > *:not(svg){
     display: block;
 }
 .hideForm::before{
@@ -52,25 +30,22 @@ button.contactButton:active{
     width: 100%;
     height: 100%;
 }
-
+.holdingContactInput{
+    width:100% ;
+    margin: 1em;
+}
 .hideForm.showComplete::before{
     content: 'Thanks for the Email!'
 }
 .hideLoadingImage{
-    display: none !important;;
+    display: none !important;
     width:1px;
     height: 1in;
     padding: 0;
     margin:0;
 }
 .showLoadingImage{
+    display: block!important;
     padding: 10%;
     margin: 0 auto;
-    display: block;
-    animation: spinning 1s infinite  ;
-    animation-timing-function: linear;
-}
-@keyframes spinning {
-    from {transform: rotate(0deg);}    
-    to {transform: rotate(360deg);}    
 }
