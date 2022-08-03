@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import './Contact.css'
 import loadingIcon from './Images/loading.svg'
 import {Button} from '@mui/material'
-import { TextField, Box, CircularProgress } from '@mui/material';
-import {useTheme} from "@mui/material/styles";
-function Contact() {
-    const theme = useTheme();
+import { TextField, Box, CircularProgress } from '@mui/material'; 
+function Contact() { 
     const [hideForm, sethideForm] = useState(false)
     const [showComplete, setShowComplete] = useState(false)
     const [inputEmailValue, setInputEmailValue] = useState("")
