@@ -11,11 +11,23 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { useEffect } from 'react';
 import backgroundImg from './Images/pexels-did.jpg'
-import { Box, createTheme, Paper, ThemeProvider,Grid,Container,Stack} from '@mui/material';  
-
+import { Box, Paper,Grid,Container} from '@mui/material';  
+import { createTheme,ThemeProvider} from "@mui/material/styles";
+import { lime, red} from "@mui/material/colors";
 
 const cardStyling = {padding:"0.25in", margin:"0.25in", maxWidth:"5in"}
-
+const theme = createTheme({
+  
+    palette: {
+      primary:{
+        main: lime[100]
+      } ,
+      secondary:{
+        main: red[200]
+      }
+    }
+  
+})
 
 function Home() {
 
@@ -31,7 +43,7 @@ function Home() {
     })},[])
 
   return (
-   
+   <ThemeProvider theme={theme}>
     <main id='home'> 
     <Grid container spacing="0.7em" sx={{overflowX:'hidden'}}> 
       <NavBar/>
@@ -67,7 +79,7 @@ function Home() {
       </footer> 
       </Grid>
     </main>
-
+    </ThemeProvider>
   );
 }
 

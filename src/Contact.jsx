@@ -3,7 +3,9 @@ import './Contact.css'
 import loadingIcon from './Images/loading.svg'
 import {Button} from '@mui/material'
 import { TextField, Box, CircularProgress } from '@mui/material';
+import {useTheme} from "@mui/material/styles";
 function Contact() {
+    const theme = useTheme();
     const [hideForm, sethideForm] = useState(false)
     const [showComplete, setShowComplete] = useState(false)
     const [inputEmailValue, setInputEmailValue] = useState("")
@@ -58,13 +60,15 @@ function Contact() {
         <h2>Contact Me</h2>
         <p>Email me for business inquiries or to just say hello.</p>
         <Box  id='contactForm' onSubmit={handleSubmit} component='form'>
-
-                <TextField className='holdingContactInput'  label='Email' variant='outlined' required name='Input' type='email' value={inputEmailValue} onChange={handleEmailChange}/>
-
-                <TextField className='holdingContactInput' variant='outlined' label='Subject' required name='Subject' type='text' value={inputSubjectValue} onChange={handleSubjectChange}/>
- 
-                <TextField className='holdingContactInput' multiline label='Body' variant='outlined' name='textArea' rows='4' maxLength='256' value={inputBodyValue} onChange={handleBodyChange}/>
-
+            <Box sx={{margin:"0.5em"}}>
+                <TextField color="secondary" className='holdingContactInput'  label='Email' variant='outlined' required name='Input' type='email' value={inputEmailValue} onChange={handleEmailChange}/>
+            </Box>
+            <Box sx={{margin:"0.5em"}}>
+                <TextField color="secondary" className='holdingContactInput' variant='outlined' label='Subject' required name='Subject' type='text' value={inputSubjectValue} onChange={handleSubjectChange}/>
+            </Box>
+            <Box sx={{margin:"0.5em"}}>
+                <TextField color="secondary" className='holdingContactInput' multiline label='Body' variant='outlined' name='textArea' rows='4' maxLength='256' value={inputBodyValue} onChange={handleBodyChange}/>
+            </Box>
             <Button variant="contained"  className='contactButton pointer' type='submit'>Submit</Button>
         </Box>
     </div>

@@ -5,7 +5,7 @@ import gitButton from "./Images/github.svg"
 import { AppBar,IconButton,Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { GitHub, Home } from '@mui/icons-material';
-
+import {useTheme} from "@mui/material/styles"
 
 const navLinks = [
   {
@@ -17,6 +17,7 @@ const navLinks = [
   }
 ]; 
 function NavBar() {
+  const theme = useTheme();
   const [isOpened, setIsOpened] = useState('') 
   const [isPassed, setisPassed] = useState(false)
   function clickHandler()
