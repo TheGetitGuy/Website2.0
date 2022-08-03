@@ -18,7 +18,7 @@ function Contact() {
         formData.append('Email',inputEmailValue);
         formData.append('Subject',inputSubjectValue);
         formData.append('Body',inputBodyValue);
-        const url = 'http://localhost:5000/email/mailer'
+        const url = 'https://server-2-0.herokuapp.com/email/mailer'
         const fetchOptions = {
             method: 'POST',
             body:formData,
