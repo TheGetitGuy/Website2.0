@@ -45,17 +45,17 @@ function Home() {
   return (
    <ThemeProvider theme={theme}>
     <main id='home'> 
-    <Grid container spacing="0.7em" sx={{overflowX:'hidden'}}> 
       <NavBar/>
       <Header/>
+    <Grid container sx={{overflowX:'hidden'}} > 
       <Box className='gridContainer' sx={{display:'flex', justifyContent:'space-evenly',flexWrap:'wrap'}} >
       
-      <Grid item sm={5}  >
-        <Container className="getitCard" maxWidth='sm' >
+      <Grid item   >
+        <Container className="getitCard" maxWidth='sm'  >
           <Card  id='getitCard' img={GetitProfile.avatar_url} title={`Joseph Riter | Web Developer`} content={GetitProfile.bio}/> 
         </Container>
       </Grid>
-      <Grid item sm={5}>
+      <Grid item >
         <Container maxWidth='sm'>
           <Paper variant='outlined'  sx={cardStyling}  elevation={6}>
           <h1>Building Websites and App<wbr/>lications</h1>

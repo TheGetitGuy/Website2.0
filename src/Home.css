@@ -8,17 +8,16 @@ main {
   
 }
 body{
-  
+  margin:0;
   background-size:cover;
   font-family: 'Roboto'; 
 }
 .gridContainer{
-  margin: 0 auto;
-  max-width: 12in;
+  margin: 0 auto; 
 }
 
 .getitCard{
-  margin-top: 2em;
+  margin: 3em;
 }
 
 footer{  
