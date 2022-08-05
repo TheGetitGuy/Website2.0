@@ -50,17 +50,19 @@ function Home() {
     <Grid container sx={{overflowX:'hidden'}} > 
       <Box className='gridContainer' sx={{display:'flex', justifyContent:'space-evenly',flexWrap:'wrap'}} >
       
-      <Grid item   >
+      <Grid item md={6}  >
         <Container className="getitCard" maxWidth='sm'  >
           <Card  id='getitCard' img={GetitProfile.avatar_url} title={`Joseph Riter | Web Developer`} content={GetitProfile.bio}/> 
         </Container>
       </Grid>
-      <Grid item >
+      <Grid item md={6} >
         <Container maxWidth='sm'>
           <Paper variant='outlined'  sx={cardStyling}  elevation={6}>
           <h1>Building Websites and App<wbr/>lications</h1>
-          <h2>React ◦ Django ◦ JavaScript ◦ FrontEnd</h2>
+          <h3>React ◦ Django ◦ JavaScript ◦ FrontEnd</h3>
           <p>Professional developer who can adapt to anything because of his hardworking nature.</p>
+          <h3>A self taught developer</h3>
+          <p> sifting his way through tons of web dev books and video courses.</p> 
           </Paper>
           
           <Paper variant='outlined' sx={cardStyling} elevation={6}>
@@ -68,11 +70,11 @@ function Home() {
           </Paper>
         </Container>
         </Grid> 
-      <Grid item sm={8}>
-      </Grid>
-      </Box>
+      <Grid item sm={16}>
       <Box>
       <ProjectContent/>
+      </Box>
+      </Grid>
       </Box>
       <footer> A website built in React.js by Joseph Riter.<br/>
       Server made with Node.js and Express.
