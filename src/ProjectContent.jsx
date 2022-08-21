@@ -7,23 +7,32 @@ import reactCards from './Images/projects/reactCards.png'
 import retro from './Images/projects/retro-mmov3.png'
 import rotten from './Images/projects/rottentacoscreencap.png'
 import saveher from './Images/projects/saveher.png'
+import postBoard from './Images/projects/postBoardScreenshot.png'
 
 
 const cardsToMake = [//The urls are used as ids so keep them different
   {
-    urlForNav: 'https://www.pyligen.com/',
+    url1: 'https://www.pyligen.com/',
+    url2: 'https://github.com/TheGetitGuy/2darraygenerator',
     picture: pyligen, //Needs Recropped
     cardTitle: 'Python List Generator',
     size: '2in',
     cardContent:'A tool for generating 2d lists for use in python. I made this for building my own games.',
   },{
-    urlForNav: 'https://codepen.io/thegetitguy/pen/QWOXypd/result',
+    url1: 'https://codepen.io/thegetitguy/pen/QWOXypd/result',
     picture: pixelGenerator,
     cardTitle: 'Object Oriented Canvas Project',
     size: '2in',
     cardContent:'This is a project made to learn canvas and get more experience with the javascript class system.',
   },{
-    urlForNav: 'https://codepen.io/thegetitguy/pen/ExbrgzN/result',
+    url1: 'https://post.thegetitguy.com',
+    url2: 'https://github.com/TheGetitGuy/postBoard',
+    picture: postBoard,
+    cardTitle: 'Post Board',
+    size: '2in',
+    cardContent:'A micro blogging platform built with Bcrypt, Express, and PUG templating',
+  },{
+    url1: 'https://codepen.io/thegetitguy/pen/ExbrgzN/result',
     picture: reactCards,
     cardTitle: 'React Generated Cards',
     size: '2in',
@@ -34,13 +43,13 @@ const cardsToMake = [//The urls are used as ids so keep them different
     cardTitle: 'Retro-MMO Fan Site',
     cardContent:'The latest version of my fansite for the Retro-MMO community.',
   },{  */
-    urlForNav: 'https://codepen.io/thegetitguy/full/JjOaORK/result',
+    url1: 'https://codepen.io/thegetitguy/full/JjOaORK/result',
     picture: rotten,
     cardTitle: 'Mock E-Commerce Site',
     size: '200',
     cardContent:'Practicing HTML and CSS by building a responsive Mock E-Commerce Site ',
   },{
-    urlForNav: 'https://thegetitguy.itch.io/save-her-ugj-33',
+    url1: 'https://thegetitguy.itch.io/save-her-ugj-33',
     picture: saveher,
     cardTitle: 'Save Her',
     size: '200',
@@ -61,7 +70,7 @@ function ProjectContent() {
   return (
     <div ref={refforCardBox} className={`contentCardsBox ${cardBoxIsVisible ? 'isVisible' : ''}`}>
         {cardsToMake.map((currentCard) =>(
-           (<Card  size={currentCard.size} className='contentCards' key={currentCard.urlForNav} url={currentCard.urlForNav} img={currentCard.picture} title={currentCard.cardTitle} content={currentCard.cardContent}/>)
+           (<Card  size={currentCard.size} className='contentCards' key={currentCard.url1} url1={currentCard.url1} url2={currentCard.url2} img={currentCard.picture} title={currentCard.cardTitle} content={currentCard.cardContent}/>)
         ))}
     </div>
   );
