@@ -7,7 +7,7 @@ import reactCards from './Images/projects/reactCards.png'
 import retro from './Images/projects/retro-mmov3.png'
 import rotten from './Images/projects/rottentacoscreencap.png'
 import saveher from './Images/projects/saveher.png'
-import postBoard from './Images/projects/postBoardScreenshot.png'
+import postBoard from './Images/projects/postBoardScreenShot.png'
 
 
 const cardsToMake = [//The urls are used as ids so keep them different
