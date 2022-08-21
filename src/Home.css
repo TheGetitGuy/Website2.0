@@ -1,10 +1,10 @@
 :root{ 
-  overflow-x: hidden;
-  width: 100vw;
   
 }
 
-body{
+body{ 
+  width: 100vw;
+  overflow-x: hidden;
   margin:0;
   background-size:cover;
   font-family: 'Roboto'; 
@@ -14,7 +14,7 @@ body{
 }
 
 .getitCard{
-  margin: 3em;
+  margin-top: 3em;
 }
 
 footer{  
