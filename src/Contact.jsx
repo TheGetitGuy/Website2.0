@@ -18,7 +18,7 @@ function Contact() {
         formData.append('Email',inputEmailValue);
         formData.append('Subject',inputSubjectValue);
         formData.append('Body',inputBodyValue);
-        const url = 'https://server-2-0.herokuapp.com/email/mailer'
+        const url = 'https://server2-0-git-master-thegetitguy.vercel.app/email/mailer'
         const fetchOptions = {
             method: 'POST',
             body:formData,
