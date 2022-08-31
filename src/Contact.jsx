@@ -19,7 +19,7 @@ function Contact() {
         formData.append('Subject',inputSubjectValue);
         formData.append('Body',inputBodyValue);
 
-        const url = 'https://server2-0.vercel.app/email/mailer?'+formData.toString()
+        const url = 'https://Server20.joethegetitguy.repl.co/email/mailer?'+formData.toString()
         console.log(url)
 
         const fetchOptions = {
