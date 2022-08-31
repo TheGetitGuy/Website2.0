@@ -18,7 +18,10 @@ function Contact() {
         formData.append('Email',inputEmailValue);
         formData.append('Subject',inputSubjectValue);
         formData.append('Body',inputBodyValue);
-        const url = 'https://server2-0.vercel.app/email/mailer'
+
+        const url = 'https://server2-0.vercel.app/email/mailer?'+formData.toString()
+        console.log(url)
+
         const fetchOptions = {
             method: 'POST',
             body:formData,
