@@ -8,6 +8,7 @@ import retro from './Images/projects/retro-mmov3.png'
 import rotten from './Images/projects/rottentacoscreencap.png'
 import saveher from './Images/projects/saveher.png'
 import postBoard from './Images/projects/postBoardScreenShot.png'
+import weatherApp from './Images/projects/weatherApp.png'
 
 
 const cardsToMake = [//The urls are used as ids so keep them different
@@ -18,6 +19,13 @@ const cardsToMake = [//The urls are used as ids so keep them different
     cardTitle: 'Python List Generator',
     size: '2in',
     cardContent:'A tool for generating 2d lists for use in python. I made this for building my own games.',
+  },{
+    url1: 'https://weather-app-umber-eta.vercel.app/',
+    url2: 'https://github.com/TheGetitGuy/weather-app',
+    picture: weatherApp,
+    cardTitle: 'React Weather App',
+    size: '2in',
+    cardContent:'Communicates with an api, through my server, to display the weather forcast of any city.',
   },{
     url1: 'https://codepen.io/thegetitguy/pen/QWOXypd/result',
     picture: pixelGenerator,
