@@ -61,10 +61,12 @@ function Home() {
               <Container maxWidth='sm'>
                 <Paper variant='outlined' sx={cardStyling} elevation={6}>
                   <h1>Building Websites and Applications</h1>
-                  <h3>React ◦ Django ◦ JavaScript ◦ FrontEnd</h3>
-                  <p>Professional developer who can adapt to anything because of his hardworking nature.</p>
-                  <h3>A self taught developer</h3>
-                  <p> sifting his way through tons of web dev books and video courses.</p>
+                  <h3>React ◦ TypeScript ◦ Spring ◦ Express</h3>
+                  <p>Professional developer who can adapt to anything.</p>
+                  <h3>Hardworking, and Family Oriented</h3>
+                  <p>From getting requirements from business members, to getting my daughter to decide on what to eat, I know how to calmly manage those tough situations.</p>
+                  <h3>Co-op Focused</h3>
+                  <p>I engage my team, tackle pull request, reach out, and take on extra work when needed to meet those deadlines.</p>
                 </Paper>
 
               </Container>

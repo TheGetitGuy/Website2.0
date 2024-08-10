@@ -13,7 +13,7 @@ import weatherApp from './Images/projects/weatherApp.png'
 
 const cardsToMake = [//The urls are used as ids so keep them different
   {
-    url1: 'https://www.pyligen.com/',
+    // url1: 'https://www.pyligen.com/',
     url2: 'https://github.com/TheGetitGuy/2darraygenerator',
     picture: pyligen, //Needs Recropped
     cardTitle: 'Python List Generator',
@@ -33,7 +33,7 @@ const cardsToMake = [//The urls are used as ids so keep them different
     size: '2in',
     cardContent:'This is a project made to learn canvas and get more experience with the javascript class system.',
   },{
-    url1: 'https://post.thegetitguy.com',
+    // url1: 'https://post.thegetitguy.com',
     url2: 'https://github.com/TheGetitGuy/postBoard',
     picture: postBoard,
     cardTitle: 'Post Board',
